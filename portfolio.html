@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="/img/title/title.png">
+    <title>Portfolio</title>
+    <script
+      src="https://kit.fontawesome.com/c75b212d79.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <div class="header">
+          <div class="main-header-row">
+            <nav class="navigation">
+              <a class="logo" href="./index.html"
+                ><span class="logo-item">Web</span>Studio</a
+              >
+
+              <ul>
+                <li class="nav-item">
+                  <button id="myBtn" class="link">Студія</button>
+                </li>
+                <li class="nav-item">
+                  <a class="link" href="portfolio.html">Портфоліо</a>
+                </li>
+                <li class="nav-item">
+                  <a class="link" href="#main-footer">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+
+            <ul class="contacts">
+              <li class="nav-item">
+                <a class="mail-link" href="mailto:info@devstudio.com"
+                  ><i class="fa-regular fa-envelope"></i> info@devstudio.com</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="phone-link" href="tel:+380961111111"
+                  ><i class="fa-solid fa-mobile-screen-button"></i> +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="myModal" class="modal">
+      <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- <span class="close">&times;</span> -->
+        <!-- <h1 class="modal-head">Залиште свої дані, ми вам передзвонимо</h1> -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Залиште свої дані, ми вам передзвонимо</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>          
+          <div class="modal-body">
+            <form id="form">
+              <div class="form-group mb-3">
+                <label for="recipient-name" class="col-form-label _req">Ім'я</label>
+                <input type="text" class="form-control" id="recipient-name" placeholder="Ім'я користувача">
+              </div>
+              <div class="form-group mb-3">
+                <label for="recipient-name" class="col-form-label _req">Телефон</label>
+                <input type="tel" class="form-control" id="phoneInput" placeholder="Телефон">
+              </div>
+              <div class="form-group mb-3">
+                <label for="recipient-name" class="col-form-label _req _email">Пошта</label>
+                <input type="email" class="form-control plaintext" id="email" placeholder="Пошта">
+              </div>
+              <div class="form-group mb-3">
+                <label for="message-text" class="col-form-label">Коментар</label>
+                <textarea class="form-control" id="message-text" placeholder="Введіть текст"></textarea>
+              </div>
+              <div class="form-group form-check">
+                <input class="form-check-input position-static _req" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                <p class="modal-text">Погоджуюся з розсилкою та приймаю <a class="modal-link" href="/contract-terms.html">Умови договору</a></p> 
+              </div>
+              <div class="modal-footer d-flex justify-content-center align-items-center">
+                <button type="submit" class="btn btn-primary btn-lg">Відправити</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+    </div>
+    <main>
+      <section class="portfolio-section">
+        <div class="container">
+          <h1 class="portfolio-title">Портфоліо</h1>
+          <ul class="portfolio-buttons">
+            <li class="li-button">
+              <button id="all-button" class="portfolio-button" type="button">Усі</button>
+            </li>
+            <li class="li-button">
+              <button id="web-sites-button" class="portfolio-button" type="button">Веб-сайти</button>
+            </li>
+            <li class="li-button">
+              <button id="applications-button" class="portfolio-button" type="button">Додатки</button>
+            </li>
+            <li class="li-button">
+              <button id="design-button" class="portfolio-button" type="button">Дизайн</button>
+            </li>
+            <li class="li-button">
+              <button id="marketing-button" class="portfolio-button" type="button">Маркетинг</button>
+            </li>
+          </ul>
+          <ul>
+            <li class="kinds-of-work" id="web-site">
+              <a href="#"
+                ><img
+                  src="img/portfolio-items/technokryak.jpg"
+                  alt="laptop"
+                  width="370"
+                  height="294"
+                />
+                
+                <h2 class="project-title">Технокряк</h2>
+                <p class="kind-of-project">Веб-сайт</p>
+              </a>
+            </li>
+
+            <li class="kinds-of-work" id="design">
+              <a href="#"
+                ><img
+                  src="img/portfolio-items/new-orlean.jpg"
+                  alt="basketbolists"
+                  width="370"
+                  height="294"
+                />
+                
+                <h2 class="project-title">Постер New Orlean vs Golden Star</h2>
+                <p class="kind-of-project">Дизайн</p>
+                
+              </a>
+            </li>
+
+            <li class="kinds-of-work" id="application">
+              <a href="#"
+                ><img
+                  src="img/portfolio-items/seafood.jpg"
+                  alt="seafood-logo"
+                  width="370"
+                  height="294"
+                />
+                
+                <h2 class="project-title">Ресторан Seafood</h2>
+                <p class="kind-of-project">Додаток</p>
+                
+            </li>
+
+            <li class="kinds-of-work" id="marketing">
+              <a href="#"
+                ><img
+                  src="img/portfolio-items/project-prime.jpg"
+                  alt="headphotes"
+                  width="370"
+                  height="294"
+                />
+               
+                <h2 class="project-title">Проєкт Prime</h2>
+                <p class="kind-of-project">Маркетинг</p>
+                
+              </a>
+            </li>
+
+            <li class="kinds-of-work" id="application">
+              <a href="#"
+                ><img
+                  src="img/portfolio-items/project-boxes.jpg"
+                  alt="boxes"
+                  width="370"
+                  height="294"
+                />
+               
+                <h2 class="project-title">Маркетинг</h2>
+                <p class="kind-of-project">Додаток</p>
+                
+              </a>
+            </li>
+
+            <li class="kinds-of-work" id="web-site">
+              <a href="#"
+                ><img
+                  src="img/portfolio-items/inspiration-has-no-borders.jpg"
+                  alt="monitor"
+                  width="370"
+                  height="294"
+                />
+               
+                <h2 class="project-title">Inspiration has no Borders</h2>
+                <p class="kind-of-project">Веб-сайт</p>
+                
+              </a>
+            </li>
+
+            <li class="kinds-of-work" id="design">
+              <a href="#"
+                ><img
+                  src="img/portfolio-items/limited-edition.jpg"
+                  alt="book"
+                  width="370"
+                  height="294"
+                />
+               
+                <h2 class="project-title">Видання Limited Edition</h2>
+                <p class="kind-of-project">Дизайн</p>
+                
+              </a>
+            </li>
+
+            <li class="kinds-of-work" id="marketing">
+              <a href="#"
+                ><img
+                  src="img/portfolio-items/project-lab.jpg"
+                  alt="LAB tag"
+                  width="370"
+                  height="294"
+                />
+                
+                <h2 class="project-title">Проєкт LAB</h2>
+                <p class="kind-of-project">Маркетинг</p>
+                
+              </a>
+            </li>
+
+            <li class="kinds-of-work" id="application">
+              <a href="#"
+                ><img
+                  src="img/portfolio-items/growing-business.jpg"
+                  alt="laptop"
+                  width="370"
+                  height="294"
+                />
+               
+                <h2 class="project-title">Growing Business</h2>
+                <p class="kind-of-project">Додаток</p>
+                
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer id="main-footer">
+      <div class="container">
+        <div class="footer-row">
+          <div class="footer-contacts">
+            <a class="footer-logo" href="./index.html"
+              ><span class="logo-item">Web</span>Studio</a
+            >
+            <address>
+              <ul class="footer-items">
+                <li class="footer-item">
+                  <a
+                    class="main-address"
+                    href="https://goo.gl/maps/5MdLTrmTFjrpdcXQ8"
+                    target="_blank"
+                    title="Карти Google"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="footer-item">
+                  <a class="mail-link" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="footer-item">
+                  <a class="phone-link" href="tel:+380961111111"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-links">
+            <h3 class="footer-head">приєднуйтесь</h3>
+            <ul class="footer-links">
+              <li class="footer-link">
+                <a href="#" title="instagram"> </a>
+                <i class="fa-brands fa-instagram"></i>
+              </li>
+              <li class="footer-link">
+                <a href="#" title="twitter"> </a>
+                <i class="fa-brands fa-twitter"></i>
+              </li>
+              <li class="footer-link">
+                <a href="#" title="facebook"> </a>
+                <i class="fa-brands fa-facebook-f"></i>
+              </li>
+              <li class="footer-link">
+                <a href="#" title="linkedin"> </a>
+                <i class="fa-brands fa-linkedin-in"></i>
+              </li>
+            </ul>
+          </div>
+          <div class="e-mail">
+            <h3 class="footer-head">Підпишіться на розсилку</h3>
+            <input type="email" id="email-footer" name="email" placeholder="E-mail" />
+            <button class="subscribe" type="button" onclick="window.location.href='https://t.me/drhtsnk?logo=telegram'">
+              <span class="button-text">Підписатися</span
+              ><img
+                class="tg-icon"
+                src="/img/icons/icon send.png"
+                width="24"
+                height="24"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./script/script.js"></script>
+  </body>
+</html>
